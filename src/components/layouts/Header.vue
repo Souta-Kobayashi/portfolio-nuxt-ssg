@@ -17,10 +17,30 @@ const hamburgerIconBottomSpan = computed(() => ({
   "top-[14px]": !showMenu.value,
   "top-[10px]": showMenu.value,
 }))
+
+const headerRef = ref<HTMLElement | null>(null)
+
+const scrollToSection = (id: string) => {
+  showMenu.value = false
+  const element = document.getElementById(id)
+  if (element && headerRef.value) {
+    const headerHeight = headerRef.value.offsetHeight
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY
+    const offsetPosition = elementPosition - headerHeight
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    })
+  }
+}
 </script>
 
 <template>
-  <header class="font-extralight bg-slate-100 h-16 fixed top-0 left-0 right-0 z-[100] shadow-lg">
+  <header
+    ref="headerRef"
+    class="font-extralight bg-slate-100 h-16 fixed top-0 left-0 right-0 z-[100] shadow-lg"
+  >
     <div class="px-8 m-auto max-w-screen-xl h-full flex justify-between items-center">
       <div class="text-3xl tracking-wide">
         <a href="/">ZeroOne Script</a>
@@ -29,32 +49,37 @@ const hamburgerIconBottomSpan = computed(() => ({
         <ul class="hidden lg:flex gap-8 items-center">
           <li>
             <a
-              href="#"
+              href="#about"
               class="text-xl"
+              @click.prevent="scrollToSection('about')"
             >About</a>
           </li>
           <li>
             <a
-              href="#"
+              href="#service"
               class="text-xl"
+              @click.prevent="scrollToSection('service')"
             >Service</a>
           </li>
           <li>
             <a
-              href="#"
+              href="#works"
               class="text-xl"
+              @click.prevent="scrollToSection('works')"
             >Works</a>
           </li>
           <li>
             <a
-              href="#"
+              href="#profile"
               class="text-xl"
+              @click.prevent="scrollToSection('profile')"
             >Profile</a>
           </li>
           <li>
             <a
-              href="#"
+              href="#contact"
               class="text-xl"
+              @click.prevent="scrollToSection('contact')"
             >Contact</a>
           </li>
           <li>
@@ -91,6 +116,7 @@ const hamburgerIconBottomSpan = computed(() => ({
     </div>
     <LayoutsOverlayMenu
       :show-menu="showMenu"
+      @scroll-to-section="scrollToSection"
     />
   </header>
 </template>

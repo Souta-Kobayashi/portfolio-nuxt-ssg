@@ -7,7 +7,11 @@ const props = withDefaults(defineProps<Props>(), {
   showMenu: false,
 })
 
-const hamburgerIconTopSpan = computed(() => ({
+const emit = defineEmits<{
+  scrollToSection: [id: string]
+}>()
+
+const overlayViewDiv = computed(() => ({
   "bg-stone-100": props.showMenu,
   // toggle
   "visible": props.showMenu,
@@ -15,22 +19,27 @@ const hamburgerIconTopSpan = computed(() => ({
   "opacity-100": props.showMenu,
   "opacity-0": !props.showMenu,
 }))
+
+const scrollToSection = (id: string) => {
+  emit("scrollToSection", id)
+}
 </script>
 
 <template>
   <div
     class="transition-all duration-300 fixed top-0 left-0 w-full h-full py-[100px] px-[60px] text-center"
-    :class="hamburgerIconTopSpan"
+    :class="overlayViewDiv"
   >
     <nav>
       <ul>
         <li class="pt-4 text-left max-w-80 mx-auto">
           <a
-            href="#"
+            href="#about"
+            @click.prevent="scrollToSection('about')"
           >
             <div class="flex gap-6 items-center">
               <img
-                class="w-[30px] h-[30px]"
+                class="svg-image"
                 src="~/public/images/overlay-about.svg"
                 alt="このサイトについて"
               >
@@ -40,11 +49,12 @@ const hamburgerIconTopSpan = computed(() => ({
         </li>
         <li class="pt-4 text-left max-w-80 mx-auto">
           <a
-            href="#"
+            href="#service"
+            @click.prevent="scrollToSection('service')"
           >
             <div class="flex gap-6 items-center">
               <img
-                class="w-[30px] h-[30px]"
+                class="svg-image"
                 src="~/public/images/overlay-test.svg"
                 alt="サービス"
               >
@@ -54,11 +64,12 @@ const hamburgerIconTopSpan = computed(() => ({
         </li>
         <li class="pt-4 text-left max-w-80 mx-auto">
           <a
-            href="#"
+            href="#works"
+            @click.prevent="scrollToSection('works')"
           >
             <div class="flex gap-6 items-center">
               <img
-                class="w-[30px] h-[30px]"
+                class="svg-image"
                 src="~/public/images/overlay-work.svg"
                 alt="制作一覧"
               >
@@ -67,10 +78,13 @@ const hamburgerIconTopSpan = computed(() => ({
           </a>
         </li>
         <li class="pt-4 text-left max-w-80 mx-auto">
-          <a href="#">
+          <a
+            href="#profile"
+            @click.prevent="scrollToSection('profile')"
+          >
             <div class="flex gap-6 items-center">
               <img
-                class="w-[30px] h-[30px]"
+                class="svg-image"
                 src="~/public/images/overlay-profile.svg"
                 alt="プロフィール"
               >
@@ -80,11 +94,12 @@ const hamburgerIconTopSpan = computed(() => ({
         </li>
         <li class="pt-4 text-left max-w-80 mx-auto">
           <a
-            href="#"
+            href="#contact"
+            @click.prevent="scrollToSection('contact')"
           >
             <div class="flex gap-6 items-center">
               <img
-                class="w-[30px] h-[30px]"
+                class="svg-image"
                 src="~/public/images/overlay-contact.svg"
                 alt="お問い合わせ"
               >
@@ -98,7 +113,7 @@ const hamburgerIconTopSpan = computed(() => ({
           >
             <div class="flex gap-6 items-center">
               <img
-                class="w-[30px] h-[30px]"
+                class="svg-image"
                 src="~/public/images/overlay-x.svg"
                 alt="X"
               >
@@ -110,3 +125,10 @@ const hamburgerIconTopSpan = computed(() => ({
     </nav>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.svg-image {
+  width: 30px;
+  height: 30px;
+}
+</style>

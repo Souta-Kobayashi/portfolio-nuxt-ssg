@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss"],
   srcDir: "src/",
-  // ssr: false,
+  ssr: false,
   eslint: {
     config: {
       stylistic: {

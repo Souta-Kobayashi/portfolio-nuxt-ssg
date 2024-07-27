@@ -2,8 +2,16 @@
 import type { SwiperOptions } from "swiper/types"
 import { register } from "swiper/element/bundle"
 import { Autoplay } from "swiper/modules"
+import { useIntersectionObserver } from "~/composables/useIntersectionObserver"
 
 register()
+
+const { isIntersecting, initializeObserver, startObserve } = useIntersectionObserver()
+const sectionRef = ref<HTMLElement | null>(null)
+
+onBeforeMount(() => {
+  initializeObserver()
+})
 
 // https://swiperjs.com/element#parameters-as-props
 const init = () => {
@@ -30,12 +38,15 @@ const init = () => {
 
 onMounted(() => {
   init()
+  if (sectionRef.value) startObserve(sectionRef.value)
 })
 </script>
 
 <template>
   <section
+    ref="sectionRef"
     class="relative w-full h-full"
+    :class="[isIntersecting ? 'move-up' : 'initial-hidden']"
   >
     <swiper-container
       init="false"
@@ -67,26 +78,37 @@ onMounted(() => {
         <h2 class="text-2xl font-bold mb-8 sm:text-4xl">
           緻密な設計と論理に基づく<br>プログラムで、貴社の<span class="inline-block">ビジネスに</span><span class="inline-block">貢献します。</span>
         </h2>
-        <a
-          href="#"
-          class="flex justify-center items-center"
+        <div
+          class="flex justify-center items-center mx-auto px-5 py-3 w-52 sm:w-80 sm:px-7 sm:py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
         >
-
-          <button class="flex items-center px-5 py-3 sm:px-7 sm:py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md">
+          <a
+            href="#"
+            class="flex"
+          >
             <img
               class="svg-image mr-3"
               src="~/public/images/cta-button.svg"
               alt="プロフィール"
             >
             <span class="text-xl sm:text-2xl font-bold">お問い合わせ</span>
-          </button>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
+.initial-hidden {
+  transform: translateY(25px);
+  opacity: 0;
+}
+.move-up {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 1s, opacity 1s;
+}
+
 .svg-image {
   width: 30px;
   height: 30px;

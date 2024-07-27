@@ -1,73 +1,38 @@
-<script setup lang="ts">
-// // import { color } from "../composables/useColor"
-
-// console.log("test")
-// // const useColor =  useState<string>('color', () => 'pink')
-// // console.log(useState('color').value);
-// // console.log(color);
-
-// console.log(useColor())
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <FirstView />
-  <div class="h-96">
-    <p>
-      これはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアです
-    </p>
-  </div>
-  <div class="h-96">
-    <p>
-      これはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアです
-    </p>
-  </div>
-  <div class="h-96">
-    <p>
-      これはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアです
-    </p>
-  </div>
-  <div class="h-96">
-    <p>
-      これはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアですこれはテキストエリアです
-    </p>
-  </div>
+  <AboutSlot />
+  <ServiceSlot />
+  <WorksSlot />
+  <ProfileSlot />
+  <ContactSlot />
 </template>
 
 <style lang="scss" scoped>
-// /* ヘッダーのスタイル */
-// header {
-//   background-color: #333; /* モノトーンの背景色 */
-//   color: #fff; /* テキストの色 */
-//   padding: 20px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
+// /* ベーススタイル */
+// body {
+//   @apply bg-gray-100 text-gray-800 font-sans;
 // }
-// /* ロゴのスタイル */
-// .logo {
-//   font-size: 24px;
-//   font-weight: bold;
-//   // text-transform: uppercase;
+
+// /* 見出し */
+// h2 {
+//   @apply text-3xl font-bold mb-4;
+//   padding-bottom: 0.5rem;
 // }
-// /* ナビゲーションメニューのスタイル */
-// nav ul {
-//   list-style-type: none;
-//   margin: 0;
-//   padding: 0;
-//   display: flex;
+
+// /* テキスト */
+// p, ul {
+//   @apply text-lg leading-relaxed;
 // }
-// nav ul li {
-//   margin-right: 20px;
+
+// /* ボタン */
+// button {
+//   @apply mt-4 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded;
 // }
-// nav ul li:last-child {
-//   margin-right: 0;
-// }
-// nav ul li a {
-//   color: #fff;
-//   text-decoration: none;
-//   transition: color 0.3s ease;
-// }
-// nav ul li a:hover {
-//   color: #ccc; /* ナビゲーションメニューのホバー時の色 */
+
+// /* コンテナ */
+// .container {
+//   @apply mx-auto px-4;
 // }
 </style>
