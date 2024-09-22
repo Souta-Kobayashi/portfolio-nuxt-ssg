@@ -67,6 +67,7 @@ const scrollToSectionLocal = (id: string) => {
           alt="Binary code representing ZeroOne Script"
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
           placeholder
+          loading="lazy"
         />
       </swiper-slide>
       <swiper-slide
