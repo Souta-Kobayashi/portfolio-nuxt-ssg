@@ -11,10 +11,10 @@ const hideOverlay = () => {
 
 <template>
   <FirstView />
-  <AboutSlot />
   <ServiceSlot />
-  <WorksSlot />
   <ProfileSlot />
+  <WorksSlot />
+  <AboutSlot />
   <ContactSlot
     @show-overlay="showOverlay"
   />

@@ -6,7 +6,7 @@
   <BaseSection
     id="service"
     title="Service"
-    bg-color="bg-gray-100"
+    bg-color="bg-white"
   >
     <div class="grid gap-12 lg:grid-cols-2">
       <!-- サービス概要 -->
