@@ -15,7 +15,7 @@
             class="rounded-lg shadow-md w-full h-auto"
             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
             loading="lazy"
-            placeholder="blur"
+            placeholder
           />
         </div>
         <div class="w-full md:w-1/2 md:pl-8">
