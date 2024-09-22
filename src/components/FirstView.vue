@@ -66,7 +66,6 @@ const scrollToSectionLocal = (id: string) => {
           src="/images/first-view-1.jpg"
           alt="Binary code representing ZeroOne Script"
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
-          loading="lazy"
           placeholder="blur"
         />
       </swiper-slide>
@@ -77,7 +76,6 @@ const scrollToSectionLocal = (id: string) => {
           src="/images/first-view-2.jpg"
           alt="Binary code representing ZeroOne Script"
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
-          loading="lazy"
           placeholder="blur"
         />
       </swiper-slide>
@@ -88,7 +86,6 @@ const scrollToSectionLocal = (id: string) => {
           src="/images/first-view-3.jpg"
           alt="Binary code representing ZeroOne Script"
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
-          loading="lazy"
           placeholder="blur"
         />
       </swiper-slide>
