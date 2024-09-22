@@ -1,0 +1,20 @@
+{
+  // Enable ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+    // "source.fixAll.stylelint": "always"
+  },
+  // tailwind
+  "tailwindCSS.experimental.classRegex": ["tw`(.*?)`", "tw\\('(.*?)'\\)", "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.wordWrapColumn": 80,
+  "debug.console.wordWrap": true,
+  "diffEditor.wordWrap": "inherit",
+}
