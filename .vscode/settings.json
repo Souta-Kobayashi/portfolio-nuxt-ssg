@@ -14,4 +14,7 @@
   "editor.quickSuggestions": {
     "strings": true
   },
+  "editor.wordWrapColumn": 80,
+  "debug.console.wordWrap": true,
+  "diffEditor.wordWrap": "inherit",
 }

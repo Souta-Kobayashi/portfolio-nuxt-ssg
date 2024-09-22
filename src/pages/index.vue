@@ -1,4 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const isOverlayVisible = ref(false)
+
+const showOverlay = () => {
+  isOverlayVisible.value = true
+}
+const hideOverlay = () => {
+  isOverlayVisible.value = false
+}
+</script>
 
 <template>
   <FirstView />
@@ -6,7 +15,13 @@
   <ServiceSlot />
   <WorksSlot />
   <ProfileSlot />
-  <ContactSlot />
+  <ContactSlot
+    @show-overlay="showOverlay"
+  />
+  <MessageSentOverlay
+    :is-overlay-visible
+    @hide-overlay="hideOverlay"
+  />
 </template>
 
 <style lang="scss" scoped>

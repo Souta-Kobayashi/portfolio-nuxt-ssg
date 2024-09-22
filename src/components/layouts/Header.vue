@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useScrollToSection } from "~/composables/useScrollToSection"
+
 const showMenu = ref(false)
 const hamburgerIconTopSpan = computed(() => ({
   "origin-center": showMenu.value,
@@ -18,21 +20,20 @@ const hamburgerIconBottomSpan = computed(() => ({
   "top-[10px]": showMenu.value,
 }))
 
+const { setScrollHeader, scrollToSection } = useScrollToSection()
+
 const headerRef = ref<HTMLElement | null>(null)
 
-const scrollToSection = (id: string) => {
-  showMenu.value = false
-  const element = document.getElementById(id)
-  if (element && headerRef.value) {
-    const headerHeight = headerRef.value.offsetHeight
-    const elementPosition = element.getBoundingClientRect().top + window.scrollY
-    const offsetPosition = elementPosition - headerHeight
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    })
+onMounted(() => {
+  if (headerRef.value) {
+    setScrollHeader(headerRef.value)
+    useState<HTMLElement>("headerRef", () => headerRef.value as HTMLElement)
   }
+})
+
+const scrollToSectionLocal = (id: string) => {
+  showMenu.value = false
+  scrollToSection(id)
 }
 </script>
 
@@ -51,35 +52,35 @@ const scrollToSection = (id: string) => {
             <a
               href="#about"
               class="text-xl"
-              @click.prevent="scrollToSection('about')"
+              @click.prevent="scrollToSectionLocal('about')"
             >About</a>
           </li>
           <li>
             <a
               href="#service"
               class="text-xl"
-              @click.prevent="scrollToSection('service')"
+              @click.prevent="scrollToSectionLocal('service')"
             >Service</a>
           </li>
           <li>
             <a
               href="#works"
               class="text-xl"
-              @click.prevent="scrollToSection('works')"
+              @click.prevent="scrollToSectionLocal('works')"
             >Works</a>
           </li>
           <li>
             <a
               href="#profile"
               class="text-xl"
-              @click.prevent="scrollToSection('profile')"
+              @click.prevent="scrollToSectionLocal('profile')"
             >Profile</a>
           </li>
           <li>
             <a
               href="#contact"
               class="text-xl"
-              @click.prevent="scrollToSection('contact')"
+              @click.prevent="scrollToSectionLocal('contact')"
             >Contact</a>
           </li>
           <li>
@@ -116,7 +117,7 @@ const scrollToSection = (id: string) => {
     </div>
     <LayoutsOverlayMenu
       :show-menu="showMenu"
-      @scroll-to-section="scrollToSection"
+      @scroll-to-section="scrollToSectionLocal"
     />
   </header>
 </template>

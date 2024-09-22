@@ -6,17 +6,41 @@
     title="About"
     bg-color="bg-white"
   >
-    <p class="text-lg leading-relaxed mb-4">
-      ZeroOne Scriptは、世界がゼロとイチのデジタル論理によって構築されるという信念に基づいて設立されました。当社は、精緻な設計と論理に基づく高品質なプログラムを提供することを通じて、貴社のビジネスに革新と成長をもたらします。
-    </p>
-    <p class="text-lg leading-relaxed mb-4">
-      私たちは、技術の力を最大限に活用し、お客様のニーズに合わせたカスタマイズされたソリューションを提供します。これにより、ビジネスプロセスの効率化や新しい市場への参入を支援し、競争力を高めることができます。
-    </p>
-    <p class="text-lg leading-relaxed mb-4">
-      ZeroOne Scriptの強みは、最新の技術と深い知識を持つプロフェッショナルチームです。私たちは常に最新のトレンドを追い、最先端の技術を駆使してお客様に最適なソリューションを提供します。信頼性とパフォーマンスに優れたシステムを構築し、ビジネスの成功をサポートします。
-    </p>
-    <p class="text-lg leading-relaxed">
-      これからも私たちは、お客様と共に成長し続けるパートナーとして、持続可能な成功を目指して努力していきます。ZeroOne Scriptの提供するサービスで、未来への一歩を踏み出しましょう。
-    </p>
+    <div class="bg-white text-center shadow-lg rounded-lg p-8 transition-transform duration-300 hover:scale-[1.02]">
+      <div class="flex flex-col md:flex-row items-center mb-5 md:mb-8">
+        <div class="w-full md:w-1/2 mb-6 md:mb-0">
+          <img
+            src="~/public/images/sitting-6897751_1280.jpg"
+            alt="Binary code representing ZeroOne Script"
+            class="rounded-lg shadow-md w-full h-auto"
+            loading="lazy"
+          >
+        </div>
+        <div class="w-full md:w-1/2 md:pl-8">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-700">
+            ZeroOne Scriptの理念
+          </h2>
+          <p class="text-gray-600">
+            ZeroOne Scriptは、<span class="font-bold text-blue-600">`0`</span>と<span class="font-bold text-blue-600">`1`</span>が世界を形作るという意味が込められています。
+          </p>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <p class="text-gray-600">
+          テクノロジーが日々進化を続ける中で、システムもクライアントのニーズも複雑化しています。
+        </p>
+        <p class="text-gray-600">
+          しかし、だからこそわかりやすく要点を整理して提案することこそが、真に求められる姿だと考えています。
+        </p>
+        <p class="text-gray-600">
+          私は、複雑なテクノロジーをシンプルに整理し、クライアントが理解しやすい形に仕上げます。わかりやすさと正確さを大切にしながら、ビジネスの成長を共に目指します。
+        </p>
+      </div>
+      <div class="mt-8 bg-gray-200 p-6 rounded-lg">
+        <p class="text-xl font-semibold text-center text-gray-700">
+          <span class="text-blue-600">`0`</span>と<span class="text-blue-600">`1`</span>の論理を基に、共に未来を構築しましょう。
+        </p>
+      </div>
+    </div>
   </BaseSection>
 </template>

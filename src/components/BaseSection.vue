@@ -25,7 +25,7 @@ onMounted(() => {
     class="py-12"
   >
     <div
-      class="container mx-auto px-4"
+      class="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12"
     >
       <h2 class="text-3xl font-bold mb-4 text-indigo-600 border-b-2 border-indigo-600 pb-2">
         {{ title }}

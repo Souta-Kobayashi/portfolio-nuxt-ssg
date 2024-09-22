@@ -3,11 +3,14 @@ import type { SwiperOptions } from "swiper/types"
 import { register } from "swiper/element/bundle"
 import { Autoplay } from "swiper/modules"
 import { useIntersectionObserver } from "~/composables/useIntersectionObserver"
+import { useScrollToSection } from "~/composables/useScrollToSection"
 
 register()
 
 const { isIntersecting, initializeObserver, startObserve } = useIntersectionObserver()
+const { setScrollHeader, scrollToSection } = useScrollToSection()
 const sectionRef = ref<HTMLElement | null>(null)
+const headerRef = useState<HTMLElement>("headerRef")
 
 onBeforeMount(() => {
   initializeObserver()
@@ -38,8 +41,13 @@ const init = () => {
 
 onMounted(() => {
   init()
-  if (sectionRef.value) startObserve(sectionRef.value)
+  sectionRef.value && startObserve(sectionRef.value)
+  headerRef.value && setScrollHeader(headerRef.value)
 })
+
+const scrollToSectionLocal = (id: string) => {
+  scrollToSection(id)
+}
 </script>
 
 <template>
@@ -78,21 +86,20 @@ onMounted(() => {
         <h2 class="text-2xl font-bold mb-8 sm:text-4xl">
           緻密な設計と論理に基づく<br>プログラムで、貴社の<span class="inline-block">ビジネスに</span><span class="inline-block">貢献します。</span>
         </h2>
-        <div
+        <a
           class="flex justify-center items-center mx-auto px-5 py-3 w-52 sm:w-80 sm:px-7 sm:py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
+          href="#contact"
+          @click.prevent="scrollToSectionLocal('contact')"
         >
-          <a
-            href="#"
-            class="flex"
-          >
+          <div class="flex">
             <img
               class="svg-image mr-3"
               src="~/public/images/cta-button.svg"
               alt="プロフィール"
             >
             <span class="text-xl sm:text-2xl font-bold">お問い合わせ</span>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
