@@ -223,19 +223,6 @@ onMounted(() => {
           </p>
         </div>
       </swiper-slide>
-
-      <!-- <WorksCard
-          v-for="(project, index) in projects"
-          :key="index"
-          :title="project.title"
-          :description="project.description"
-          :stack="project.stack"
-          :icon-color="project.iconColor"
-        >
-          <template #icon>
-            <path :d="project.iconPath" />
-          </template>
-        </WorksCard> -->
     </swiper-container>
 
     <!-- 幅広い工程に対応 -->

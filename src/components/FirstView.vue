@@ -62,23 +62,38 @@ const scrollToSectionLocal = (id: string) => {
       <swiper-slide
         class="w-full object-cover"
       >
-        <img
-          src="~/public/images/first-view-1.jpg"
-        >
+        <NuxtImg
+          src="/images/first-view-1.webp"
+          alt="Binary code representing ZeroOne Script"
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
+          loading="lazy"
+          placeholder="blur"
+          format="webp, avif"
+        />
       </swiper-slide>
       <swiper-slide
         class="w-full object-cover"
       >
-        <img
-          src="~/public/images/first-view-2.jpg"
-        >
+        <NuxtImg
+          src="/images/first-view-2.webp"
+          alt="Binary code representing ZeroOne Script"
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
+          loading="lazy"
+          placeholder="blur"
+          format="webp, avif"
+        />
       </swiper-slide>
       <swiper-slide
         class="w-full object-cover"
       >
-        <img
-          src="~/public/images/first-view-3.jpg"
-        >
+        <NuxtImg
+          src="/images/first-view-3.webp"
+          alt="Binary code representing ZeroOne Script"
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
+          loading="lazy"
+          placeholder="blur"
+          format="webp, avif"
+        />
       </swiper-slide>
     </swiper-container>
     <div class="absolute inset-0 flex items-center justify-center z-10 mx-2.5">
