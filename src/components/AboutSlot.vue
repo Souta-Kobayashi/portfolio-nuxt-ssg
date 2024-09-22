@@ -9,12 +9,15 @@
     <div class="bg-white text-center shadow-lg rounded-lg p-8 transition-transform duration-300 hover:scale-[1.02]">
       <div class="flex flex-col md:flex-row items-center mb-5 md:mb-8">
         <div class="w-full md:w-1/2 mb-6 md:mb-0">
-          <img
-            src="~/public/images/sitting-6897751_1280.jpg"
+          <NuxtImg
+            src="/images/sitting-6897751_1280.webp"
             alt="Binary code representing ZeroOne Script"
             class="rounded-lg shadow-md w-full h-auto"
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
             loading="lazy"
-          >
+            placeholder="blur"
+            format="webp, avif"
+          />
         </div>
         <div class="w-full md:w-1/2 md:pl-8">
           <h2 class="text-2xl font-semibold mb-4 text-gray-700">

@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     slackWebhookUrl: "",
   },
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@nuxt/image"],
   srcDir: "src/",
   ssr: false,
   eslint: {
