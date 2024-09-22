@@ -51,67 +51,69 @@ const scrollToSectionLocal = (id: string) => {
 </script>
 
 <template>
-  <section
-    ref="sectionRef"
-    class="relative w-full h-full"
-    :class="[isIntersecting ? 'move-up' : 'initial-hidden']"
-  >
-    <swiper-container
-      init="false"
+  <ClientOnly>
+    <section
+      ref="sectionRef"
+      class="relative w-full h-full"
+      :class="[isIntersecting ? 'move-up' : 'initial-hidden']"
     >
-      <swiper-slide
-        class="w-full object-cover"
+      <swiper-container
+        init="false"
       >
-        <NuxtImg
-          src="/images/first-view-1.jpg"
-          alt="Binary code representing ZeroOne Script"
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
-          placeholder="blur"
-        />
-      </swiper-slide>
-      <swiper-slide
-        class="w-full object-cover"
-      >
-        <NuxtImg
-          src="/images/first-view-2.jpg"
-          alt="Binary code representing ZeroOne Script"
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
-          placeholder="blur"
-        />
-      </swiper-slide>
-      <swiper-slide
-        class="w-full object-cover"
-      >
-        <NuxtImg
-          src="/images/first-view-3.jpg"
-          alt="Binary code representing ZeroOne Script"
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
-          placeholder="blur"
-        />
-      </swiper-slide>
-    </swiper-container>
-    <div class="absolute inset-0 flex items-center justify-center z-10 mx-2.5">
-      <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center text-white">
-        <h2 class="text-2xl font-bold mb-8 sm:text-4xl">
-          緻密な設計と論理に基づく<br>プログラムで、貴社の<span class="inline-block">ビジネスに</span><span class="inline-block">貢献します。</span>
-        </h2>
-        <a
-          class="flex justify-center items-center mx-auto px-5 py-3 w-52 sm:w-80 sm:px-7 sm:py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
-          href="#contact"
-          @click.prevent="scrollToSectionLocal('contact')"
+        <swiper-slide
+          class="w-full object-cover"
         >
-          <div class="flex">
-            <img
-              class="svg-image mr-3"
-              src="~/public/images/cta-button.svg"
-              alt="プロフィール"
-            >
-            <span class="text-xl sm:text-2xl font-bold">お問い合わせ</span>
-          </div>
-        </a>
+          <NuxtImg
+            src="/images/first-view-1.jpg"
+            alt="Binary code representing ZeroOne Script"
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
+            placeholder="blur"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="w-full object-cover"
+        >
+          <NuxtImg
+            src="/images/first-view-2.jpg"
+            alt="Binary code representing ZeroOne Script"
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
+            placeholder="blur"
+          />
+        </swiper-slide>
+        <swiper-slide
+          class="w-full object-cover"
+        >
+          <NuxtImg
+            src="/images/first-view-3.jpg"
+            alt="Binary code representing ZeroOne Script"
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
+            placeholder="blur"
+          />
+        </swiper-slide>
+      </swiper-container>
+      <div class="absolute inset-0 flex items-center justify-center z-10 mx-2.5">
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center text-white">
+          <h2 class="text-2xl font-bold mb-8 sm:text-4xl">
+            緻密な設計と論理に基づく<br>プログラムで、貴社の<span class="inline-block">ビジネスに</span><span class="inline-block">貢献します。</span>
+          </h2>
+          <a
+            class="flex justify-center items-center mx-auto px-5 py-3 w-52 sm:w-80 sm:px-7 sm:py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
+            href="#contact"
+            @click.prevent="scrollToSectionLocal('contact')"
+          >
+            <div class="flex">
+              <img
+                class="svg-image mr-3"
+                src="~/public/images/cta-button.svg"
+                alt="プロフィール"
+              >
+              <span class="text-xl sm:text-2xl font-bold">お問い合わせ</span>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </ClientOnly>
 </template>
 
 <style lang="scss" scoped>
