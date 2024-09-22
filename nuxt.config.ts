@@ -21,4 +21,7 @@ export default defineNuxtConfig({
       isCustomElement: tag => /^(swiper|swiper-slide|swiper-container)$/.test(tag),
     },
   },
+  // image: {
+  // provider: "netlify",
+  // },
 })
