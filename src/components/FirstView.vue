@@ -63,12 +63,11 @@ const scrollToSectionLocal = (id: string) => {
         class="w-full object-cover"
       >
         <NuxtImg
-          src="/images/first-view-1.webp"
+          src="/images/first-view-1.jpg"
           alt="Binary code representing ZeroOne Script"
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
+          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
           loading="lazy"
           placeholder="blur"
-          format="webp, avif"
         />
       </swiper-slide>
       <swiper-slide
