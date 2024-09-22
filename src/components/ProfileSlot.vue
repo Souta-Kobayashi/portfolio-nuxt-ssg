@@ -21,14 +21,11 @@
         />
       </div>
       <div class="text-center lg:text-left">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">
-          リードエンジニア
-        </h2>
         <p class="text-lg text-gray-700 mb-4">
-          ZeroOne Scriptの創設者であり、リードエンジニアとして活動しています。ウェブ開発における豊富な経験を持ち、最先端の技術を駆使してクライアントのビジネスを成功に導いています。
+          初めまして、小林です。WEBエンジニアとして、クライアントのニーズに応じたシステム開発を行っています。
         </p>
         <p class="text-lg text-gray-700 mb-4">
-          フロントエンドおよびバックエンドの開発を専門とし、効率的かつスケーラブルなシステムを設計・構築することに情熱を持っています。常に新しい技術を学び、プロジェクトに最適なソリューションを提供することを心掛けています。
+          フルスタックエンジニアとして幅広く活動し、常に新しい技術を学び、クライアントに最適なソリューションを提供することを心がけています。
         </p>
       </div>
     </div>
@@ -80,7 +77,7 @@
             <span class="font-semibold text-gray-800">ビルドツール:</span> Vite, Webpack
           </li>
 
-          <li><span class="font-semibold text-gray-800">テスト:</span> Vitest（コンポーネントテスト, IT）</li>
+          <li><span class="font-semibold text-gray-800">テスト:</span> Vitest(コンポーネントテスト, IT)</li>
         </ul>
       </div>
 
@@ -133,18 +130,18 @@
             バックエンド開発
           </h4>
         </div>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <ul class="text-gray-700 space-y-2">
           <li>
-            <span class="font-semibold text-gray-800">言語:</span> Node.js
+            <span class="font-semibold text-gray-800">言語:</span> PHP, Node.js
           </li>
           <li>
-            <span class="font-semibold text-gray-800">フレームワーク:</span> Express, NestJS
+            <span class="font-semibold text-gray-800">フレームワーク:</span> Laravel
           </li>
           <li>
-            <span class="font-semibold text-gray-800">API設計:</span> RESTful, GraphQL
+            <span class="font-semibold text-gray-800">API設計:</span> RESTful
           </li>
           <li>
-            <span class="font-semibold text-gray-800">クラウドサービス:</span> AWS, Azure, GCP
+            <span class="font-semibold text-gray-800">クラウドサービス:</span> AWS, GC
           </li>
         </ul>
       </div>
@@ -182,15 +179,12 @@
             Web開発
           </h4>
         </div>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <ul class="text-gray-700 space-y-2">
           <li>
-            <span class="font-semibold text-gray-800">CMS:</span> WordPress
+            <span class="font-semibold text-gray-800">アプリケーション開発:</span> SaaS、業務システム
           </li>
           <li>
-            <span class="font-semibold text-gray-800">テーマ開発:</span> カスタムテーマ制作
-          </li>
-          <li>
-            <span class="font-semibold text-gray-800">プラグイン開発:</span> オリジナルプラグイン作成
+            <span class="font-semibold text-gray-800">CMS:</span> WordPress(オリジナルテーマ開発, 保守運用)
           </li>
           <li>
             <span class="font-semibold text-gray-800">サイト構築:</span> 企業・個人向けサイト
@@ -225,15 +219,15 @@
           </svg>
 
           <h4 class="text-xl font-semibold text-gray-800">
-            データベース管理
+            データベース
           </h4>
         </div>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <ul class="text-gray-700 space-y-2">
           <li>
-            <span class="font-semibold text-gray-800">データベース:</span> MySQL, MongoDB
+            <span class="font-semibold text-gray-800">データベース:</span> MySQL, MariaDB
           </li>
           <li>
-            <span class="font-semibold text-gray-800">データモデリング:</span> 正規化、インデックス設計
+            <span class="font-semibold text-gray-800">データモデリング:</span> テーブル設計、正規化、インデックス設計
           </li>
           <li>
             <span class="font-semibold text-gray-800">パフォーマンス最適化:</span> クエリチューニング
@@ -269,9 +263,9 @@
             DevOps
           </h4>
         </div>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <ul class="text-gray-700 space-y-2">
           <li>
-            <span class="font-semibold text-gray-800">CI/CDツール:</span> GitHub Actions
+            <span class="font-semibold text-gray-800">CI/CDツール:</span> GitHub Actions, Jenkins
           </li>
           <li>
             <span class="font-semibold text-gray-800">コンテナ技術:</span> Docker
