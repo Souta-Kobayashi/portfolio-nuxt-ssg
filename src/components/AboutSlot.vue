@@ -10,13 +10,12 @@
       <div class="flex flex-col md:flex-row items-center mb-5 md:mb-8">
         <div class="w-full md:w-1/2 mb-6 md:mb-0">
           <NuxtImg
-            src="/images/sitting-6897751_1280.webp"
+            src="/images/sitting-6897751_1280.jpg"
             alt="Binary code representing ZeroOne Script"
             class="rounded-lg shadow-md w-full h-auto"
             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
             loading="lazy"
             placeholder="blur"
-            format="webp, avif"
           />
         </div>
         <div class="w-full md:w-1/2 md:pl-8">

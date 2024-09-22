@@ -65,7 +65,7 @@ const scrollToSectionLocal = (id: string) => {
         <NuxtImg
           src="/images/first-view-1.jpg"
           alt="Binary code representing ZeroOne Script"
-          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
           loading="lazy"
           placeholder="blur"
         />
@@ -74,24 +74,22 @@ const scrollToSectionLocal = (id: string) => {
         class="w-full object-cover"
       >
         <NuxtImg
-          src="/images/first-view-2.webp"
+          src="/images/first-view-2.jpg"
           alt="Binary code representing ZeroOne Script"
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
           loading="lazy"
           placeholder="blur"
-          format="webp, avif"
         />
       </swiper-slide>
       <swiper-slide
         class="w-full object-cover"
       >
         <NuxtImg
-          src="/images/first-view-3.webp"
+          src="/images/first-view-3.jpg"
           alt="Binary code representing ZeroOne Script"
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px"
           loading="lazy"
           placeholder="blur"
-          format="webp, avif"
         />
       </swiper-slide>
     </swiper-container>
