@@ -50,17 +50,17 @@ const scrollToSectionLocal = (id: string) => {
         <ul class="hidden lg:flex gap-8 items-center">
           <li>
             <a
-              href="#about"
-              class="text-xl"
-              @click.prevent="scrollToSectionLocal('about')"
-            >About</a>
-          </li>
-          <li>
-            <a
               href="#service"
               class="text-xl"
               @click.prevent="scrollToSectionLocal('service')"
             >Service</a>
+          </li>
+          <li>
+            <a
+              href="#profile"
+              class="text-xl"
+              @click.prevent="scrollToSectionLocal('profile')"
+            >Profile</a>
           </li>
           <li>
             <a
@@ -71,10 +71,10 @@ const scrollToSectionLocal = (id: string) => {
           </li>
           <li>
             <a
-              href="#profile"
+              href="#about"
               class="text-xl"
-              @click.prevent="scrollToSectionLocal('profile')"
-            >Profile</a>
+              @click.prevent="scrollToSectionLocal('about')"
+            >About</a>
           </li>
           <li>
             <a
