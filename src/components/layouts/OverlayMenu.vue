@@ -34,21 +34,6 @@ const scrollToSection = (id: string) => {
       <ul>
         <li class="pt-4 text-left max-w-80 mx-auto">
           <a
-            href="#about"
-            @click.prevent="scrollToSection('about')"
-          >
-            <div class="flex gap-6 items-center">
-              <img
-                class="svg-image"
-                src="~/public/images/overlay-about.svg"
-                alt="このサイトについて"
-              >
-              <span>このサイトについて</span>
-            </div>
-          </a>
-        </li>
-        <li class="pt-4 text-left max-w-80 mx-auto">
-          <a
             href="#service"
             @click.prevent="scrollToSection('service')"
           >
@@ -64,21 +49,6 @@ const scrollToSection = (id: string) => {
         </li>
         <li class="pt-4 text-left max-w-80 mx-auto">
           <a
-            href="#works"
-            @click.prevent="scrollToSection('works')"
-          >
-            <div class="flex gap-6 items-center">
-              <img
-                class="svg-image"
-                src="~/public/images/overlay-work.svg"
-                alt="制作一覧"
-              >
-              <span>制作一覧</span>
-            </div>
-          </a>
-        </li>
-        <li class="pt-4 text-left max-w-80 mx-auto">
-          <a
             href="#profile"
             @click.prevent="scrollToSection('profile')"
           >
@@ -89,6 +59,36 @@ const scrollToSection = (id: string) => {
                 alt="プロフィール"
               >
               <span>プロフィール</span>
+            </div>
+          </a>
+        </li>
+        <li class="pt-4 text-left max-w-80 mx-auto">
+          <a
+            href="#works"
+            @click.prevent="scrollToSection('works')"
+          >
+            <div class="flex gap-6 items-center">
+              <img
+                class="svg-image"
+                src="~/public/images/overlay-work.svg"
+                alt="制作実績"
+              >
+              <span>制作実績</span>
+            </div>
+          </a>
+        </li>
+        <li class="pt-4 text-left max-w-80 mx-auto">
+          <a
+            href="#about"
+            @click.prevent="scrollToSection('about')"
+          >
+            <div class="flex gap-6 items-center">
+              <img
+                class="svg-image"
+                src="~/public/images/overlay-about.svg"
+                alt="このサイトについて"
+              >
+              <span>このサイトについて</span>
             </div>
           </a>
         </li>
