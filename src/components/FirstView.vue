@@ -99,7 +99,7 @@ const scrollToSectionLocal = (id: string) => {
           緻密な設計と論理に基づく<br>プログラムで、貴社の<span class="inline-block">ビジネスに</span><span class="inline-block">貢献します。</span>
         </h2>
         <a
-          class="flex justify-center items-center mx-auto px-5 py-3 w-52 sm:w-80 sm:px-7 sm:py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md"
+          class="flex justify-center items-center mx-auto px-5 py-3 w-52 sm:w-80 sm:px-7 sm:py-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 text-white rounded-md transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:brightness-110"
           href="#contact"
           @click.prevent="scrollToSectionLocal('contact')"
         >

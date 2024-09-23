@@ -109,7 +109,9 @@ const scrollToSection = (id: string) => {
         </li>
         <li class="pt-4 text-left max-w-80 mx-auto">
           <a
-            href="#"
+            href="https://x.com/soutaappservice/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div class="flex gap-6 items-center">
               <img
