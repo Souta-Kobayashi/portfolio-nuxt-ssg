@@ -85,7 +85,9 @@ const scrollToSectionLocal = (id: string) => {
           </li>
           <li>
             <a
-              href="#"
+              href="https://x.com/soutaappservice/"
+              target="_blank"
+              rel="noopener noreferrer"
               class="text-xl"
             ><img
               class="w-[20px] h-[20px]"

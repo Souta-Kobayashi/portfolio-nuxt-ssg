@@ -21,7 +21,12 @@ export default defineNuxtConfig({
       isCustomElement: tag => /^(swiper|swiper-slide|swiper-container)$/.test(tag),
     },
   },
-  // image: {
-  // provider: "netlify",
-  // },
+  app: {
+    head: {
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      ],
+    },
+  },
 })
