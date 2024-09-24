@@ -43,7 +43,7 @@ const scrollToSectionLocal = (id: string) => {
     class="font-extralight bg-slate-100 h-16 fixed top-0 left-0 right-0 z-[100] shadow-lg"
   >
     <div class="px-8 m-auto max-w-screen-xl h-full flex justify-between items-center">
-      <div class="text-3xl tracking-wide">
+      <div class="text-3xl tracking-wide header-title">
         <a href="/">ZeroOne Script</a>
       </div>
       <nav>
@@ -51,35 +51,35 @@ const scrollToSectionLocal = (id: string) => {
           <li>
             <a
               href="#service"
-              class="text-xl"
+              class="text-xl nav-link"
               @click.prevent="scrollToSectionLocal('service')"
             >Service</a>
           </li>
           <li>
             <a
               href="#profile"
-              class="text-xl"
+              class="text-xl nav-link"
               @click.prevent="scrollToSectionLocal('profile')"
             >Profile</a>
           </li>
           <li>
             <a
               href="#works"
-              class="text-xl"
+              class="text-xl nav-link"
               @click.prevent="scrollToSectionLocal('works')"
             >Works</a>
           </li>
           <li>
             <a
               href="#about"
-              class="text-xl"
+              class="text-xl nav-link"
               @click.prevent="scrollToSectionLocal('about')"
             >About</a>
           </li>
           <li>
             <a
               href="#contact"
-              class="text-xl"
+              class="text-xl nav-link"
               @click.prevent="scrollToSectionLocal('contact')"
             >Contact</a>
           </li>
@@ -88,7 +88,7 @@ const scrollToSectionLocal = (id: string) => {
               href="https://x.com/soutaappservice/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-xl"
+              class="text-xl sns-logo"
             ><img
               class="w-[20px] h-[20px]"
               src="~/public/images/overlay-x.svg"
@@ -123,3 +123,34 @@ const scrollToSectionLocal = (id: string) => {
     />
   </header>
 </template>
+
+<style lang="scss" scoped>
+header {
+  background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+}
+
+.nav-link {
+  color: #333333;
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: #4f46e5;
+  border-bottom: 2px solid #4f46e5;
+}
+
+.sns-logo img {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.sns-logo:hover img {
+  transform: scale(1.1); /* 画像を少し拡大 */
+  opacity: 0.8; /* 画像の不透明度を変更 */
+}
+
+.header-title {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.05em;
+}
+</style>

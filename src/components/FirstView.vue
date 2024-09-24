@@ -103,7 +103,7 @@ const scrollToSectionLocal = (id: string) => {
           href="#contact"
           @click.prevent="scrollToSectionLocal('contact')"
         >
-          <div class="flex">
+          <div class="flex items-center">
             <img
               class="svg-image mr-3"
               src="~/public/images/cta-button.svg"

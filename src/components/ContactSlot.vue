@@ -107,7 +107,7 @@ const sendMessage = async () => {
         </div>
         <button
           type="submit"
-          class="block mx-auto w-full mt-14 py-4 text-xl font-bold bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition duration-200"
+          class="block mx-auto w-full mt-14 py-4 text-xl font-bold bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition duration-200 leading-normal"
           :disabled="isLoading"
         >
           送信する
