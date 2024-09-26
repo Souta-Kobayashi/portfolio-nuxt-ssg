@@ -1,3 +1,7 @@
+/**
+ * これは説明文です
+ * @returns returnのことを詳細に記載する
+ */
 export function useIntersectionObserver() {
   let observer: IntersectionObserver
   const isIntersecting = ref(false)

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { SwiperOptions } from "swiper/types"
 import { register } from "swiper/element/bundle"
-import { Autoplay } from "swiper/modules"
+import { Autoplay, Pagination } from "swiper/modules"
 import type { SwiperContainer } from "swiper/element"
 
 register()
@@ -12,14 +12,16 @@ const init = () => {
 
   const swiperParams: SwiperOptions = {
     slidesPerView: 1,
-    pagination: true,
+    pagination: {
+      dynamicBullets: true,
+    },
     loop: true,
     centeredSlides: true,
     autoplay: {
       delay: 12000,
     },
     speed: 700,
-    modules: [Autoplay],
+    modules: [Autoplay, Pagination],
   }
 
   if (swiperEl) {
