@@ -23,6 +23,8 @@
   "devDependencies": {
     "@nuxt/eslint": "^0.3.10",
     "http-server": "^14.1.1",
-    "sass": "^1.75.0"
+    "sass": "^1.75.0",
+    "typedoc": "^0.26.7",
+    "typedoc-plugin-vue": "^1.2.0"
   }
 }

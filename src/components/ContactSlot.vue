@@ -107,10 +107,24 @@ const sendMessage = async () => {
         </div>
         <button
           type="submit"
-          class="block mx-auto w-full mt-14 py-4 text-xl font-bold bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition duration-200 leading-normal"
+          class="w-full mx-auto py-4 text-xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 active:bg-purple-700 text-white rounded-full shadow-lg active:shadow-none transition duration-300 ease-in-out transform active:scale-95 flex items-center justify-center space-x-2"
           :disabled="isLoading"
         >
-          送信する
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3 "
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          <span>送信する</span>
         </button>
       </form>
 
